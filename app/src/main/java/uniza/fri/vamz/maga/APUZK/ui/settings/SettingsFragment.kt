@@ -1,17 +1,17 @@
-package uniza.fri.vamz.maga.APUZK.ui.account
+package uniza.fri.vamz.maga.APUZK.ui.settings
 
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
-import uniza.fri.vamz.maga.APUZK.databinding.FragmentAccountBinding
+import uniza.fri.vamz.maga.APUZK.databinding.FragmentOffersBinding
+import uniza.fri.vamz.maga.APUZK.ui.offers.OffersViewModel
 
-class AccountFragment : Fragment() {
+class SettingsFragment : Fragment() {
 
-    private var _binding: FragmentAccountBinding? = null
+    private var _binding: FragmentOffersBinding? = null
 
     // This property is only valid between onCreateView and
     // onDestroyView.
@@ -22,10 +22,10 @@ class AccountFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        val accountViewModel =
-            ViewModelProvider(this).get(AccountViewModel::class.java)
+        val offersViewModel =
+            ViewModelProvider(this).get(SettingsViewModel::class.java)
 
-        _binding = FragmentAccountBinding.inflate(inflater, container, false)
+        _binding = FragmentOffersBinding.inflate(inflater, container, false)
         val root: View = binding.root
 
         return root
